@@ -1,0 +1,23 @@
+[2026-04-09T17:36:30Z] === ENRICH ITERATION 1 START | repo=dabeaz/curio sha=73da34cd ===
+[2026-04-09T17:36:30Z] [iter=1] PHASE START: enrich repo=dabeaz/curio sha=73da34cd runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/73da34cd-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/73da34cdbce6df9ec46ce31e093b6d6bc218d076.nq.gz
+[2026-04-09T17:36:30Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=76 MB
+[2026-04-09T17:36:32Z] [iter=1] AST store loaded triples=259595 load_secs=2 mem_mb=434 MB
+[2026-04-09T17:36:32Z] [iter=1] Step 2: Finding LSP targets mem_mb=434 MB
+[2026-04-09T17:36:32Z] [iter=1] LSP targets found call_sites=2630 imports=175 extends=42 implements=0 secs=0
+[2026-04-09T17:36:32Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=434 MB
+[2026-04-09T17:36:34Z] [iter=1] Position index built positions=17518 nodes_with_types=22955 secs=1 mem_mb=434 MB
+[2026-04-09T17:36:34Z] [iter=1] Step 3: Starting LSP resolution mem_mb=434 MB already_completed_types=[] already_completed_files=0
+[2026-04-09T17:36:34Z] [iter=1] Resolving target type target_type=call_site count=2630
+[2026-04-09T17:37:23Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.9 files_done=4 resolved=74 errors=596 current=tests/test_kernel.py
+[2026-04-09T17:38:00Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.5 files_done=11 resolved=132 errors=1055 current=curio/monitor.py
+[2026-04-09T17:38:31Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.0 files_done=19 resolved=238 errors=1425 current=examples/echoserv5.py
+[2026-04-09T17:39:02Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.5 files_done=29 resolved=372 errors=1798 current=examples/ssl_echo_client.py
+[2026-04-09T17:39:30Z] [iter=1] Target type resolved target_type=call_site resolved=528 errors=2071 secs=177 mem_mb=434 MB
+[2026-04-09T17:39:30Z] [iter=1] Resolving target type target_type=import_statement count=175
+[2026-04-09T17:39:32Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=3.0 files_done=38 resolved=120 errors=0 current=examples/bench/curiostream.py
+[2026-04-09T17:39:32Z] [iter=1] Target type resolved target_type=import_statement resolved=163 errors=0 secs=2 mem_mb=434 MB
+[2026-04-09T17:39:32Z] [iter=1] Resolving target type target_type=extends_clause count=42
+[2026-04-09T17:39:34Z] [iter=1] Target type resolved target_type=extends_clause resolved=39 errors=0 secs=1 mem_mb=434 MB
+[2026-04-09T17:39:38Z] [iter=1] Step 5: Writing final enrichment file triples=23074
+[2026-04-09T17:39:38Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/73da34cdbce6df9ec46ce31e093b6d6bc218d076.nq.gz size_kb=411
+[2026-04-09T17:39:38Z] [iter=1] PHASE END: enrich elapsed_s=188 elapsed_min=3.1 total_triples=23074
